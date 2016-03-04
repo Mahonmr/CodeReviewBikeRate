@@ -1,0 +1,25 @@
+{{#if addNewBikeStore}}
+<h1>New Bike Store</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Bike Store</label>
+        {{input value=name id="name"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Add Image</label>
+        {{input value=bikestore_url id="bikestore_url"}}
+      </div>
+
+      <div class="form-group">
+        <label for="bikeprice">Bike Price</label>
+        {{input value=bikeprice id="bikeprice"}}
+      </div>
+
+      <button {{action 'saveBikeStore'}}>Save</button>
+    </form>
+  </div>
+ {{else}}
+    <button class="btn btn-success"{{action 'bikeFormShow'}}>New Store</button>
+{{/if}}

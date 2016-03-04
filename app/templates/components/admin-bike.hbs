@@ -1,0 +1,14 @@
+<h2>Admin Bike Store</h2>
+
+{{#if bikes}}
+  {{#each bikes as |bike|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>{{bike.name}}</li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some Bike Stores!</h2>
+{{/if}}
+{{admin-newBikeStore saveBikeStore='saveBikeStore' }}
