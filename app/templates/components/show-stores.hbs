@@ -7,10 +7,17 @@
         <h2 style="color:green;">{{bike-cost store.bikeprice}}</h2>
         <h2>{{store.name}}</h2>
         <img style="max-width:100px; margin-top: -10px;" src="{{store.bikestore_url}}" alt="" />
-        {{show-comments store=store}}
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-md-9">
+            {{show-comments store=store}}
+          </div>
+          <div class="col-md-3 pull-right">
+            {{#link-to 'storecomments' store.id class="btn btn-success"}}Add Comment{{/link-to}}
+          </div>
+        </div>
       </div>
     </div>
   {{/each}}
 {{else}}
-  <h2>What!  No bike stores!</h2>
+  <h2>What! No bike stores!</h2>
 {{/if}}

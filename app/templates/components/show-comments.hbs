@@ -1,6 +1,8 @@
 {{#if showComments}}
   <h1>Comments</h1>
-  <li>{{#link-to 'storecomments' store.id }}link{{/link-to}}</li>
+  {{#each store.comments as |comment|}}
+    <h2>{{comment.description}}</h2>
+  {{/each}}
     <button class="btn btn-success"{{action 'hideCommentsForm'}}>Hide Comments</button>
  {{else}}
     <button class="btn btn-success"{{action 'showCommentsForm'}}>View Comments</button>

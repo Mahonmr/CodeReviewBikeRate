@@ -1,1 +1,7 @@
 <h2>comments</h2>
+
+{{#each model.comments as |comment|}}
+<h2>{{comment.description}}</h2>
+{{/each}}
+
+{{new-comment bikestore=model saveComment="saveComment"}}
