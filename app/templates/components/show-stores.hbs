@@ -1,0 +1,16 @@
+<h1>Bike Stores</h1>
+
+{{#if stores}}
+  {{#each stores as |store|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <h2 style="color:green;">{{bike-cost store.bikeprice}}</h2>
+        <h2>{{store.name}}</h2>
+        <img style="max-width:100px; margin-top: -10px;" src="{{store.bikestore_url}}" alt="" />
+        {{show-comments store=store}}
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>What!  No bike stores!</h2>
+{{/if}}

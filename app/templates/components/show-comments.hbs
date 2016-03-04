@@ -1,0 +1,7 @@
+{{#if showComments}}
+  <h1>Comments</h1>
+  <li>{{#link-to 'storecomments' store.id }}link{{/link-to}}</li>
+    <button class="btn btn-success"{{action 'hideCommentsForm'}}>Hide Comments</button>
+ {{else}}
+    <button class="btn btn-success"{{action 'showCommentsForm'}}>View Comments</button>
+{{/if}}

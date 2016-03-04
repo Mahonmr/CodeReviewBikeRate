@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('admin');
+  this.route('storecomments', {path: 'bikestore/:bikestore_id'});
 });
 
 export default Router;
