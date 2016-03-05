@@ -13,9 +13,9 @@ export default Ember.Component.extend({
 
     saveComment() {
       var params = {
-        bikestore: this.get('bikestore'),
-        description: this.get('description'),
-        author: this.get('author'),
+        bikestore: this.get('bikestore') || null,
+        description: this.get('description') || null,
+        author: this.get('author') || null,
         bikelike: this.get('bikelike'),
         timestamp: Date.now()
       };
