@@ -1,10 +1,17 @@
 <h1>Bike Stores</h1>
 
 {{#if stores}}
-  {{#each stores as |store|}}
+  {{#each sortedbikestores as |store|}}
     <div class="row well">
       <div class="col-md-12">
-        <h2 style="color:green;">{{bike-cost store.bikeprice}}</h2>
+        <div class="row">
+          <div class="col-md-9">
+            <h2 style="color:green;">{{bike-cost store.bikeprice}}</h2>
+          </div>
+          <div class="col-md-3 pull-right">
+            <h3>{{show-store store=store}}</h3>
+          </div>
+        </div>
         <h2>{{store.name}}</h2>
         <img style="max-width:100px; margin-top: -10px;" src="{{store.bikestore_url}}" alt="" />
         <div class="row" style="margin-top: 10px;">

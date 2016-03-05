@@ -8,6 +8,7 @@ export default Ember.Component.extend({
       this.set('description', "");
       this.set('author', "");
       this.set('bikelike', "");
+      this.set('timestamp', "");
     },
 
     saveComment() {
@@ -15,7 +16,8 @@ export default Ember.Component.extend({
         bikestore: this.get('bikestore'),
         description: this.get('description'),
         author: this.get('author'),
-        bikelike: this.get('bikelike')
+        bikelike: this.get('bikelike'),
+        timestamp: Date.now()
       };
       this.set('addNewComment', false);
       this.sendAction('saveComment', params);
