@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export function bikeLiker(params) {
+  console.log(params)
   var like = params[0];
   if(like == 5) {
     return '&&&&&'
