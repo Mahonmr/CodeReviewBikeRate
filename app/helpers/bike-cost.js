@@ -4,15 +4,15 @@ export function bikeCost(params) {
   var price = params[0];
 
   if(price == 5) {
-    return '$$$$$'
+    return '$$$$$';
   }else if(price == 4){
-    return '$$$$'
+    return '$$$$';
   }else if(price == 3){
-    return '$$$'
+    return '$$$';
   }else if(price == 2){
-    return '$$'
+    return '$$';
   }else{
-    return '$'
+    return '$';
   }
 }
 

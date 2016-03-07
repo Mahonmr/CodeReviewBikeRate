@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       var params = {
         bikestore: this.get('bikestore') || null,
         description: this.get('description') || null,
-        author: this.get('author') || null,
+        author: this.get('author') || 'anonymous',
         bikelike: this.get('bikelike'),
         timestamp: Date.now()
       };
